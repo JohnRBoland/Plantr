@@ -1,3 +1,10 @@
+/*
+ Plant.java	 
+ CSIT 211 Final Project    
+ Updated: 8.5.2015
+ Programmer: John Boland 
+
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -19,20 +26,18 @@ public class PlnLstConst{
 		FileScan = new Scanner (new File(fileLocation));
 		List<Plant> plantList = new ArrayList<Plant>();
 
-				//plantList can now be filled with plant objects
+		//plantList can now be filled with plant objects
 
-			while (FileScan.hasNext())
+		while (FileScan.hasNext())
 		{
-			newPlant = FileScan.nextLine();
-			LineParser = new Scanner(newPlant);
-			LineParser.useDelimiter("/");
+		newPlant = FileScan.nextLine();
+		LineParser = new Scanner(newPlant);
+		LineParser.useDelimiter("/");
 
 		//input line of data			
 		//New 	
 		while(LineParser.hasNext()){	
-			Plant plnt	= new Plant();
-			
-						 
+			Plant plnt	= new Plant();						 
 			tmpStr = LineParser.next();
 			plnt.setName(tmpStr);
 		
@@ -56,13 +61,10 @@ public class PlnLstConst{
 			
 			tmpStr = LineParser.next();
 			plnt.setDescription(tmpStr);
-			
-				
-	
+							
 			plantList.add(plnt);			
+			}
 		}
-	}
-
 		
 		return plantList;
 	}
