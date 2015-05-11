@@ -1,20 +1,16 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.event.KeyListener;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 
-public class PlantrWin {
-public static void main(String[]args){
+public class PlntWin{
+private JButton searchB;
+private JTextArea explain;
+private JTextField searField;
 
+	public PlntRsltPane(){
 	JButton search = new JButton("Search");
 	search.setSize(80, 20);
 	search.setVisible(true);
-	JLabel explain = new JLabel("explain");
+	JTextArea explain = new JTextArea("explain");
 	JLabel Hello = new JLabel("Hello");
 	JLabel help = new JLabel("help");
 	
@@ -30,11 +26,8 @@ public static void main(String[]args){
 	frame.add(explain);
 	frame.add(help);
 	help.setSize(299, 212);
-	frame.add(Hello);
-	
-	frame.setLocation(400, 300);
-	
+	frame.add(Hello);	
+	frame.setLocation(400, 300);	
 	frame.setVisible(true);
-
 	}
 }
