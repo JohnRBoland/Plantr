@@ -13,11 +13,13 @@ public class PlantrPops {
 		String message;
 		
 		
+		String fileLocation = "/Users/johnboland/Documents/workspace/Practice programs/src/funPrograms/newcopy.txt";
+		
 		List<Plant> plantList = new ArrayList<Plant>();
 		PlnLstConst i = new PlnLstConst();
 		
 		try {
-			plantList = i.PlantConstructor("/Users/johnboland/Documents/workspace/Practice programs/src/funPrograms/newcopy.txt");
+			plantList = i.PlantConstructor(fileLocation);
 		} catch (FileNotFoundException e) {
 			System.out.print("FileNotFound");
 			e.printStackTrace();
@@ -28,7 +30,7 @@ public class PlantrPops {
 
 		if(onCheck == JOptionPane.OK_OPTION){
 		do	{
-			message = "Welcome to Plantr";
+			message = "Search Plantr for...";
 			search = JOptionPane.showInputDialog(message, "Please enter a Plant Name");				
 			
 			
